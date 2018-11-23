@@ -1,0 +1,33 @@
+I"¶(function() {
+  App.game = App.cable.subscriptions.create("GameChannel", {
+    connected: function() {
+      return $('#status').html("Waiting for an other player");
+    },
+    disconnected: function() {},
+    received: function(data) {
+      switch (data.action) {
+        case "game_start":
+          $('#status').html("Player found");
+          return App.gamePlay = new Game('#game-container', data.msg);
+        case "take_turn":
+          App.gamePlay.move(data.move);
+          return App.gamePlay.getTurn();
+        case "new_game":
+          return App.gamePlay.newGame();
+        case "opponent_withdraw":
+          $('#status').html("Opponent withdraw, You win!");
+          return $('#new-match').removeClass('hidden');
+      }
+    },
+    take_turn: function(move) {
+      return this.perform('take_turn', {
+        data: move
+      });
+    },
+    new_game: function() {
+      return this.perform('new_game');
+    }
+  });
+
+}).call(this);
+:ET
