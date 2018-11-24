@@ -21,7 +21,9 @@ end
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem "rspec"
+  gem 'rspec-rails'
+  gem 'rails-controller-testing'
+  gem 'capybara'
 end
 
 group :production do

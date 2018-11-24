@@ -11447,3 +11447,526 @@ GameChannel is streaming from player_zecUgam6htuM0lE3WFNynA
 GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_tShuHDqHRr051YCyXGZjQA)
 GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_zecUgam6htuM0lE3WFNynA)
 GameChannel is transmitting the subscription confirmation
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:34:08 +0800
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:34:09 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (shFM-PcO5-kHnjyfJG0wdg)
+GameChannel is streaming from player_shFM-PcO5-kHnjyfJG0wdg
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:34:22 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 380)
+Completed 200 OK in 357ms (Views: 349.9ms | ActiveRecord: 0.0ms | Allocations: 318067)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:34:23 +0800
+GameChannel stopped streaming from player_shFM-PcO5-kHnjyfJG0wdg
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:34:23 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:34:23 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (m-9DJS4B0lirQ4yvaDEjAA)
+GameChannel is streaming from player_m-9DJS4B0lirQ4yvaDEjAA
+GameChannel is transmitting the subscription confirmation
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:34:36 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:34:36 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (Oe75hSEwNW5kGYRqysmTIw)
+GameChannel is streaming from player_Oe75hSEwNW5kGYRqysmTIw
+[ActionCable] Broadcasting to player_Oe75hSEwNW5kGYRqysmTIw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_m-9DJS4B0lirQ4yvaDEjAA: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_Oe75hSEwNW5kGYRqysmTIw)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_m-9DJS4B0lirQ4yvaDEjAA)
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:35:03 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 131)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 23457)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:35:03 +0800
+[ActionCable] Broadcasting to player_Oe75hSEwNW5kGYRqysmTIw: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_m-9DJS4B0lirQ4yvaDEjAA
+GameChannel transmitting {"action"=>"opponent_withdraw"} (via streamed from player_Oe75hSEwNW5kGYRqysmTIw)
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:35:03 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:35:03 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (bgIgPj8zIC-OQgRuClUNVg)
+GameChannel is streaming from player_bgIgPj8zIC-OQgRuClUNVg
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:35:16 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 127)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 23471)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:35:16 +0800
+[ActionCable] Broadcasting to player_m-9DJS4B0lirQ4yvaDEjAA: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_Oe75hSEwNW5kGYRqysmTIw
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:35:17 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:35:17 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (OKfbUPZzqdie8uB6rb6MBg)
+[ActionCable] Broadcasting to player_bgIgPj8zIC-OQgRuClUNVg: {:action=>"game_start", :msg=>"cross"}
+GameChannel is streaming from player_OKfbUPZzqdie8uB6rb6MBg
+[ActionCable] Broadcasting to player_OKfbUPZzqdie8uB6rb6MBg: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_bgIgPj8zIC-OQgRuClUNVg)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_OKfbUPZzqdie8uB6rb6MBg)
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:39:08 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 132)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 23658)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:39:08 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:39:08 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (1kcKIZOVarthKT8U7yn-3w)
+GameChannel is streaming from player_1kcKIZOVarthKT8U7yn-3w
+GameChannel is transmitting the subscription confirmation
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:39:16 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:39:16 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (a3Kz1HPiyijxOAzvsbDmBg)
+GameChannel is streaming from player_a3Kz1HPiyijxOAzvsbDmBg
+[ActionCable] Broadcasting to player_1kcKIZOVarthKT8U7yn-3w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_a3Kz1HPiyijxOAzvsbDmBg: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_1kcKIZOVarthKT8U7yn-3w)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_a3Kz1HPiyijxOAzvsbDmBg)
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:47:33 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 126)
+Completed 200 OK in 155ms (Views: 153.4ms | ActiveRecord: 0.0ms | Allocations: 35605)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:47:33 +0800
+[ActionCable] Broadcasting to player_a3Kz1HPiyijxOAzvsbDmBg: {:action=>"opponent_withdraw"}
+GameChannel transmitting {"action"=>"opponent_withdraw"} (via streamed from player_a3Kz1HPiyijxOAzvsbDmBg)
+GameChannel stopped streaming from player_1kcKIZOVarthKT8U7yn-3w
+Started GET "/assets/game.self-5d10939061f6549b76f8f3ef4b9efcaee36f689e1b45a47ba76cb0cc46f002dc.js?body=1" for 127.0.0.1 at 2018-11-24 07:47:33 +0800
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:47:33 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:47:33 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (5XS1bpZNVTdsEUiscFAn_A)
+GameChannel is transmitting the subscription confirmation
+GameChannel is streaming from player_5XS1bpZNVTdsEUiscFAn_A
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:47:36 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 129)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 23593)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:47:36 +0800
+GameChannel stopped streaming from player_5XS1bpZNVTdsEUiscFAn_A
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:47:36 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:47:36 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (34PkkFX80e5sy4p3eBmMwA)
+GameChannel is transmitting the subscription confirmation
+GameChannel is streaming from player_34PkkFX80e5sy4p3eBmMwA
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:47:41 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 127)
+Completed 200 OK in 24ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 23502)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:47:41 +0800
+[ActionCable] Broadcasting to player_1kcKIZOVarthKT8U7yn-3w: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_a3Kz1HPiyijxOAzvsbDmBg
+Started GET "/assets/game.self-5d10939061f6549b76f8f3ef4b9efcaee36f689e1b45a47ba76cb0cc46f002dc.js?body=1" for 127.0.0.1 at 2018-11-24 07:47:41 +0800
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:47:41 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:47:41 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (jL6qLkX5-7VHh4XRzkeWSw)
+GameChannel is streaming from player_jL6qLkX5-7VHh4XRzkeWSw
+[ActionCable] Broadcasting to player_34PkkFX80e5sy4p3eBmMwA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_jL6qLkX5-7VHh4XRzkeWSw: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_34PkkFX80e5sy4p3eBmMwA)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_jL6qLkX5-7VHh4XRzkeWSw)
+GameChannel is transmitting the subscription confirmation
+GameChannel#take_turn({"data"=>"0 1"})
+[ActionCable] Broadcasting to player_jL6qLkX5-7VHh4XRzkeWSw: {:action=>"take_turn", :move=>"0 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 1"} (via streamed from player_jL6qLkX5-7VHh4XRzkeWSw)
+GameChannel#take_turn({"data"=>"1 1"})
+[ActionCable] Broadcasting to player_34PkkFX80e5sy4p3eBmMwA: {:action=>"take_turn", :move=>"1 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 1"} (via streamed from player_34PkkFX80e5sy4p3eBmMwA)
+GameChannel#take_turn({"data"=>"1 0"})
+[ActionCable] Broadcasting to player_jL6qLkX5-7VHh4XRzkeWSw: {:action=>"take_turn", :move=>"1 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 0"} (via streamed from player_jL6qLkX5-7VHh4XRzkeWSw)
+GameChannel#take_turn({"data"=>"1 2"})
+[ActionCable] Broadcasting to player_34PkkFX80e5sy4p3eBmMwA: {:action=>"take_turn", :move=>"1 2"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 2"} (via streamed from player_34PkkFX80e5sy4p3eBmMwA)
+GameChannel#take_turn({"data"=>"2 2"})
+[ActionCable] Broadcasting to player_jL6qLkX5-7VHh4XRzkeWSw: {:action=>"take_turn", :move=>"2 2"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"2 2"} (via streamed from player_jL6qLkX5-7VHh4XRzkeWSw)
+GameChannel#take_turn({"data"=>"2 1"})
+[ActionCable] Broadcasting to player_34PkkFX80e5sy4p3eBmMwA: {:action=>"take_turn", :move=>"2 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"2 1"} (via streamed from player_34PkkFX80e5sy4p3eBmMwA)
+GameChannel#take_turn({"data"=>"2 0"})
+[ActionCable] Broadcasting to player_jL6qLkX5-7VHh4XRzkeWSw: {:action=>"take_turn", :move=>"2 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"2 0"} (via streamed from player_jL6qLkX5-7VHh4XRzkeWSw)
+GameChannel#take_turn({"data"=>"0 2"})
+[ActionCable] Broadcasting to player_34PkkFX80e5sy4p3eBmMwA: {:action=>"take_turn", :move=>"0 2"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 2"} (via streamed from player_34PkkFX80e5sy4p3eBmMwA)
+GameChannel#take_turn({"data"=>"0 0"})
+[ActionCable] Broadcasting to player_jL6qLkX5-7VHh4XRzkeWSw: {:action=>"take_turn", :move=>"0 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 0"} (via streamed from player_jL6qLkX5-7VHh4XRzkeWSw)
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:52:56 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 127)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 23479)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:52:56 +0800
+[ActionCable] Broadcasting to player_jL6qLkX5-7VHh4XRzkeWSw: {:action=>"opponent_withdraw"}
+GameChannel transmitting {"action"=>"opponent_withdraw"} (via streamed from player_jL6qLkX5-7VHh4XRzkeWSw)
+GameChannel stopped streaming from player_34PkkFX80e5sy4p3eBmMwA
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:52:56 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:52:56 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (R56W-06qXbngfnT-U5zGJg)
+GameChannel is transmitting the subscription confirmation
+GameChannel is streaming from player_R56W-06qXbngfnT-U5zGJg
+Started GET "/" for 127.0.0.1 at 2018-11-24 07:53:08 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 129)
+Completed 200 OK in 101ms (Views: 98.8ms | ActiveRecord: 0.0ms | Allocations: 34853)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:53:08 +0800
+GameChannel stopped streaming from player_R56W-06qXbngfnT-U5zGJg
+Started GET "/assets/game.self-fc8d457f83a423c709a305ff5b7641e193b0478e6b4658168a16589d4cea909d.js?body=1" for 127.0.0.1 at 2018-11-24 07:53:08 +0800
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 07:53:09 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 07:53:09 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (TW-ZfFnTWHQ6j-DCjQUJTw)
+GameChannel is streaming from player_TW-ZfFnTWHQ6j-DCjQUJTw
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 12:41:28 +0800
+  [1m[35m (25.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 28.3ms | Allocations: 380)
+Completed 200 OK in 661ms (Views: 657.2ms | ActiveRecord: 0.0ms | Allocations: 325061)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 12:41:29 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 12:41:29 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (yWNEYPd_f4UlcZb2Do8K6w)
+Started GET "/" for 127.0.0.1 at 2018-11-24 12:43:17 +0800
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 380)
+Completed 200 OK in 260ms (Views: 255.5ms | ActiveRecord: 0.0ms | Allocations: 317391)
+
+
+Started GET "/assets/game.self-fc8d457f83a423c709a305ff5b7641e193b0478e6b4658168a16589d4cea909d.js?body=1" for 127.0.0.1 at 2018-11-24 12:43:17 +0800
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 12:43:17 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 12:43:17 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (DMgiU2fX3NgBP1-tvr8QrA)
+GameChannel is streaming from player_DMgiU2fX3NgBP1-tvr8QrA
+GameChannel is transmitting the subscription confirmation
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 12:43:18 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 12:43:18 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (Y9U7BMZ_PLpTqGwplhv0uQ)
+GameChannel is streaming from player_Y9U7BMZ_PLpTqGwplhv0uQ
+[ActionCable] Broadcasting to player_DMgiU2fX3NgBP1-tvr8QrA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_Y9U7BMZ_PLpTqGwplhv0uQ: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_DMgiU2fX3NgBP1-tvr8QrA)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_Y9U7BMZ_PLpTqGwplhv0uQ)
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 12:43:21 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+Completed 200 OK in 43ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 23524)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 12:43:21 +0800
+[ActionCable] Broadcasting to player_DMgiU2fX3NgBP1-tvr8QrA: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_Y9U7BMZ_PLpTqGwplhv0uQ
+GameChannel transmitting {"action"=>"opponent_withdraw"} (via streamed from player_DMgiU2fX3NgBP1-tvr8QrA)
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 12:43:21 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 12:43:21 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (A5CFQ8utgBSYHI-f2050Kg)
+GameChannel is streaming from player_A5CFQ8utgBSYHI-f2050Kg
+GameChannel is transmitting the subscription confirmation
+GameChannel#take_turn({"data"=>"0 1"})
+[ActionCable] Broadcasting to player_Y9U7BMZ_PLpTqGwplhv0uQ: {:action=>"take_turn", :move=>"0 1"}
+Started GET "/" for 127.0.0.1 at 2018-11-24 19:16:45 +0800
+Started GET "/" for 127.0.0.1 at 2018-11-24 19:16:45 +0800
+  [1m[35m (94.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (95.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 402)
+  Rendered grid/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 252)
+Completed 200 OK in 507ms (Views: 505.3ms | ActiveRecord: 0.0ms | Allocations: 349930)
+
+
+Completed 200 OK in 511ms (Views: 507.2ms | ActiveRecord: 0.0ms | Allocations: 350873)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 19:16:54 +0800
+Started GET "/" for 127.0.0.1 at 2018-11-24 19:16:54 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 132)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 22912)
+
+
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 19:16:55 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (Gp05ySxkTxHZqbQ_ebP3zQ)
+GameChannel is streaming from player_Gp05ySxkTxHZqbQ_ebP3zQ
+[ActionCable] Broadcasting to player_A5CFQ8utgBSYHI-f2050Kg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_Gp05ySxkTxHZqbQ_ebP3zQ: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_Gp05ySxkTxHZqbQ_ebP3zQ)
+GameChannel is transmitting the subscription confirmation
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 19:16:55 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 19:16:55 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (xv15sPkIQwTnpiCUEv2O3w)
+GameChannel is transmitting the subscription confirmation
+GameChannel is streaming from player_xv15sPkIQwTnpiCUEv2O3w
+Started GET "/" for 127.0.0.1 at 2018-11-24 19:17:05 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 130)
+Completed 200 OK in 42ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 23678)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 19:17:05 +0800
+GameChannel stopped streaming from player_xv15sPkIQwTnpiCUEv2O3w
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 19:17:05 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 19:17:05 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (BenYLPaIujo1iJSjUs_jdg)
+GameChannel is transmitting the subscription confirmation
+GameChannel is streaming from player_BenYLPaIujo1iJSjUs_jdg
+Started GET "/" for 127.0.0.1 at 2018-11-24 19:17:09 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 127)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 23511)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 19:17:09 +0800
+[ActionCable] Broadcasting to player_A5CFQ8utgBSYHI-f2050Kg: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_Gp05ySxkTxHZqbQ_ebP3zQ
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 19:17:09 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 19:17:09 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (hCnGRrOdNVy9WSqiULNefA)
+GameChannel is streaming from player_hCnGRrOdNVy9WSqiULNefA
+[ActionCable] Broadcasting to player_BenYLPaIujo1iJSjUs_jdg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_hCnGRrOdNVy9WSqiULNefA: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_BenYLPaIujo1iJSjUs_jdg)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_hCnGRrOdNVy9WSqiULNefA)
+GameChannel is transmitting the subscription confirmation
+GameChannel#take_turn({"data"=>"0 0"})
+[ActionCable] Broadcasting to player_hCnGRrOdNVy9WSqiULNefA: {:action=>"take_turn", :move=>"0 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 0"} (via streamed from player_hCnGRrOdNVy9WSqiULNefA)
+GameChannel#take_turn({"data"=>"1 1"})
+[ActionCable] Broadcasting to player_BenYLPaIujo1iJSjUs_jdg: {:action=>"take_turn", :move=>"1 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 1"} (via streamed from player_BenYLPaIujo1iJSjUs_jdg)
+GameChannel#take_turn({"data"=>"0 1"})
+[ActionCable] Broadcasting to player_hCnGRrOdNVy9WSqiULNefA: {:action=>"take_turn", :move=>"0 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 1"} (via streamed from player_hCnGRrOdNVy9WSqiULNefA)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 19:57:37 +0800
+[ActionCable] Broadcasting to player_hCnGRrOdNVy9WSqiULNefA: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_BenYLPaIujo1iJSjUs_jdg
+GameChannel transmitting {"action"=>"opponent_withdraw"} (via streamed from player_hCnGRrOdNVy9WSqiULNefA)
+Started GET "/" for 127.0.0.1 at 2018-11-24 21:45:52 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 132)
+Completed 200 OK in 112ms (Views: 110.8ms | ActiveRecord: 0.0ms | Allocations: 23714)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 21:45:52 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 21:45:52 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (RvIUKQKlam8nUoRDn41VOQ)
+GameChannel is streaming from player_RvIUKQKlam8nUoRDn41VOQ
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 21:46:03 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 126)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms | Allocations: 23524)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 21:46:03 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 21:46:03 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (HYn7s5RRopxB9_JmutlhEw)
+GameChannel is streaming from player_HYn7s5RRopxB9_JmutlhEw
+[ActionCable] Broadcasting to player_RvIUKQKlam8nUoRDn41VOQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_HYn7s5RRopxB9_JmutlhEw: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_RvIUKQKlam8nUoRDn41VOQ)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_HYn7s5RRopxB9_JmutlhEw)
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-24 21:46:31 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 129)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 22620)
+
+
+Started GET "/assets/animate.self-066dd43afaa891fb6cb9c597e6bd2379f2546a1489393639eafe04c3dadee305.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:31 +0800
+Started GET "/assets/game.self-0200c471d15e21429e945089dfa49eacfd64f25a3e888b8c6ba56998f2793263.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:31 +0800
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/grid.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/application.self-84c350b886d03e9066dc64982ddbf090ed69d7a43637e94272c82e9c1ba3b150.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/sugar.self-5a3dbe5e894d42ed64eddd378b39b826186a2c6e6eab654435a3049930da4a18.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/action_cable.self-cfa37c2a15741edd9b9da11c46a65786227a8fa43023ef3a0af8b2af574289f4.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/cable.self-6e0514260c1aa76eaf252412ce74e63f68819fd19bf740595f592c5ba4c36537.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/channels/game.self-44a82b5829a2aa5812b4439eb09243bb8c529238b2655b0d7fa5355dafbb704e.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/game.self-fc8d457f83a423c709a305ff5b7641e193b0478e6b4658168a16589d4cea909d.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/grid.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/application.self-afe802b04eaf1de2ea762489c83c08aa4c4ff3ff13c21566e43cb710683f5abc.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 21:46:32 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (lQ2ZKaIevViMXk5mv9s0MQ)
+GameChannel is transmitting the subscription confirmation
+GameChannel is streaming from player_lQ2ZKaIevViMXk5mv9s0MQ
+Started GET "/" for 127.0.0.1 at 2018-11-24 21:46:50 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 126)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 22614)
+
+
+Started GET "/assets/animate.self-066dd43afaa891fb6cb9c597e6bd2379f2546a1489393639eafe04c3dadee305.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:50 +0800
+Started GET "/assets/grid.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:50 +0800
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:50 +0800
+Started GET "/assets/game.self-0200c471d15e21429e945089dfa49eacfd64f25a3e888b8c6ba56998f2793263.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:50 +0800
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:50 +0800
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:50 +0800
+Started GET "/assets/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/sugar.self-5a3dbe5e894d42ed64eddd378b39b826186a2c6e6eab654435a3049930da4a18.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/action_cable.self-cfa37c2a15741edd9b9da11c46a65786227a8fa43023ef3a0af8b2af574289f4.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/cable.self-6e0514260c1aa76eaf252412ce74e63f68819fd19bf740595f592c5ba4c36537.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/game.self-fc8d457f83a423c709a305ff5b7641e193b0478e6b4658168a16589d4cea909d.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/grid.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/channels/game.self-44a82b5829a2aa5812b4439eb09243bb8c529238b2655b0d7fa5355dafbb704e.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/application.self-afe802b04eaf1de2ea762489c83c08aa4c4ff3ff13c21566e43cb710683f5abc.js?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/assets/application.self-84c350b886d03e9066dc64982ddbf090ed69d7a43637e94272c82e9c1ba3b150.css?body=1" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 21:46:51 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (Xr0PjL-DLXS8R9ILwGamCg)
+[ActionCable] Broadcasting to player_lQ2ZKaIevViMXk5mv9s0MQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_Xr0PjL-DLXS8R9ILwGamCg: {:action=>"game_start", :msg=>"nought"}
+GameChannel is streaming from player_Xr0PjL-DLXS8R9ILwGamCg
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_lQ2ZKaIevViMXk5mv9s0MQ)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_Xr0PjL-DLXS8R9ILwGamCg)
+GameChannel is transmitting the subscription confirmation
+GameChannel#take_turn({"data"=>"0 0"})
+[ActionCable] Broadcasting to player_Xr0PjL-DLXS8R9ILwGamCg: {:action=>"take_turn", :move=>"0 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 0"} (via streamed from player_Xr0PjL-DLXS8R9ILwGamCg)
+GameChannel#take_turn({"data"=>"1 1"})
+[ActionCable] Broadcasting to player_lQ2ZKaIevViMXk5mv9s0MQ: {:action=>"take_turn", :move=>"1 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 1"} (via streamed from player_lQ2ZKaIevViMXk5mv9s0MQ)
+GameChannel#take_turn({"data"=>"0 0"})
+[ActionCable] Broadcasting to player_HYn7s5RRopxB9_JmutlhEw: {:action=>"take_turn", :move=>"0 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 0"} (via streamed from player_HYn7s5RRopxB9_JmutlhEw)
+GameChannel#take_turn({"data"=>"1 0"})
+[ActionCable] Broadcasting to player_RvIUKQKlam8nUoRDn41VOQ: {:action=>"take_turn", :move=>"1 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 0"} (via streamed from player_RvIUKQKlam8nUoRDn41VOQ)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 22:00:15 +0800
+[ActionCable] Broadcasting to player_HYn7s5RRopxB9_JmutlhEw: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_RvIUKQKlam8nUoRDn41VOQ
+GameChannel transmitting {"action"=>"opponent_withdraw"} (via streamed from player_HYn7s5RRopxB9_JmutlhEw)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 22:00:17 +0800
+[ActionCable] Broadcasting to player_Xr0PjL-DLXS8R9ILwGamCg: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_lQ2ZKaIevViMXk5mv9s0MQ
+GameChannel transmitting {"action"=>"opponent_withdraw"} (via streamed from player_Xr0PjL-DLXS8R9ILwGamCg)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 22:00:34 +0800
+[ActionCable] Broadcasting to player_RvIUKQKlam8nUoRDn41VOQ: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_HYn7s5RRopxB9_JmutlhEw
+Started GET "/" for 127.0.0.1 at 2018-11-24 22:44:11 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 131)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 22631)
+
+
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 22:44:11 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 22:44:11 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (uPsKKeUvs8gUCCWVyf00Mg)
+GameChannel is transmitting the subscription confirmation
+GameChannel is streaming from player_uPsKKeUvs8gUCCWVyf00Mg
+Started GET "/" for 127.0.0.1 at 2018-11-24 22:44:16 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 126)
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 23506)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 22:44:16 +0800
+[ActionCable] Broadcasting to player_lQ2ZKaIevViMXk5mv9s0MQ: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_Xr0PjL-DLXS8R9ILwGamCg
+Started GET "/cable" for 127.0.0.1 at 2018-11-24 22:44:16 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-24 22:44:16 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (TL7ptKfOW5rWFHtCMAjHmQ)
+GameChannel is streaming from player_TL7ptKfOW5rWFHtCMAjHmQ
+[ActionCable] Broadcasting to player_TL7ptKfOW5rWFHtCMAjHmQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_uPsKKeUvs8gUCCWVyf00Mg: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_TL7ptKfOW5rWFHtCMAjHmQ)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_uPsKKeUvs8gUCCWVyf00Mg)
+GameChannel is transmitting the subscription confirmation
+GameChannel#take_turn({"data"=>"0 0"})
+[ActionCable] Broadcasting to player_uPsKKeUvs8gUCCWVyf00Mg: {:action=>"take_turn", :move=>"0 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 0"} (via streamed from player_uPsKKeUvs8gUCCWVyf00Mg)
+GameChannel#take_turn({"data"=>"0 1"})
+[ActionCable] Broadcasting to player_TL7ptKfOW5rWFHtCMAjHmQ: {:action=>"take_turn", :move=>"0 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 1"} (via streamed from player_TL7ptKfOW5rWFHtCMAjHmQ)
+GameChannel#take_turn({"data"=>"1 1"})
+[ActionCable] Broadcasting to player_uPsKKeUvs8gUCCWVyf00Mg: {:action=>"take_turn", :move=>"1 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 1"} (via streamed from player_uPsKKeUvs8gUCCWVyf00Mg)
+GameChannel#take_turn({"data"=>"2 1"})
+[ActionCable] Broadcasting to player_TL7ptKfOW5rWFHtCMAjHmQ: {:action=>"take_turn", :move=>"2 1"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"2 1"} (via streamed from player_TL7ptKfOW5rWFHtCMAjHmQ)
+GameChannel#take_turn({"data"=>"1 2"})
+[ActionCable] Broadcasting to player_uPsKKeUvs8gUCCWVyf00Mg: {:action=>"take_turn", :move=>"1 2"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 2"} (via streamed from player_uPsKKeUvs8gUCCWVyf00Mg)
+GameChannel#take_turn({"data"=>"1 0"})
+[ActionCable] Broadcasting to player_TL7ptKfOW5rWFHtCMAjHmQ: {:action=>"take_turn", :move=>"1 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"1 0"} (via streamed from player_TL7ptKfOW5rWFHtCMAjHmQ)
+GameChannel#take_turn({"data"=>"0 2"})
+[ActionCable] Broadcasting to player_uPsKKeUvs8gUCCWVyf00Mg: {:action=>"take_turn", :move=>"0 2"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"0 2"} (via streamed from player_uPsKKeUvs8gUCCWVyf00Mg)
+GameChannel#take_turn({"data"=>"2 2"})
+[ActionCable] Broadcasting to player_TL7ptKfOW5rWFHtCMAjHmQ: {:action=>"take_turn", :move=>"2 2"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"2 2"} (via streamed from player_TL7ptKfOW5rWFHtCMAjHmQ)
+GameChannel#take_turn({"data"=>"2 0"})
+[ActionCable] Broadcasting to player_uPsKKeUvs8gUCCWVyf00Mg: {:action=>"take_turn", :move=>"2 0"}
+GameChannel transmitting {"action"=>"take_turn", "move"=>"2 0"} (via streamed from player_uPsKKeUvs8gUCCWVyf00Mg)

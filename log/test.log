@@ -1,0 +1,651 @@
+  [1m[35m (207.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "tic-tac-toe-app_test"[0m
+  [1m[35m (410.3ms)[0m  [1m[35mCREATE DATABASE "tic-tac-toe-app_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (36.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "games" CASCADE[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "matches" CASCADE[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "matches" ("id" bigserial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20160531151100)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20160531142314);
+
+[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "test"], ["created_at", "2018-11-23 21:58:04.783317"], ["updated_at", "2018-11-23 21:58:04.783317"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 82)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 1908)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1920)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1920)
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_-GOqj70kfB-fIsdCrvoK-w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_1vm3YKCQBituSaYPWKeyeg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_1vm3YKCQBituSaYPWKeyeg: {:action=>"game_start", :msg=>"cross"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_eDZlWQHTaLcE3e4o24UPbg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_lQoTMRCx-OMrgPL9ppcumQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_eDZlWQHTaLcE3e4o24UPbg: {:action=>"game_start", :msg=>"cross"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_stJ6X9mq4NC0WKprYIpA_w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_TLPKNLRoWMZwrYYi_Sg7TA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_-25KPu-1htmHH7JqByKrMw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_iGq8zrXpyQTbcHSGjF1pKw: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_FGVQoGm6drcm87gGbRiy5Q: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_WrmDiKIbKoaBoxwHtthWEA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_Ttym1p0nBEUg1pq0Fv-4xQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_iK3EoPCSFd0KhDGgTHI3Eg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_4dy0qOK_Ibzbt82ZCzwzrw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_iuqSRPWrWkDmtghMl5XKNg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_4AeJwiXj_OpWrAKHqFcOoQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_9fGomdp1rQlaA-NI25VlHg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_NbyqztKduJgkkRNnXDnFeg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_B9GC4LfEzZ9AP1kGz-6VHg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_vl-sa2DP6xeTq2sNgiYEKg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_YGNuOG80XsRNSSkUZtnG2w: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_dBus838p8FPoNpf96gjEKQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_p8BPxq4f9NLUTR4OPdr40Q: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_DtPS5lIP9C1Mf9BztVE9Zg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_yrPCgEpIGwxMxZqsJroy4w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_HAPPMc3ubKQaRF2BSJjYPQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_k7B9gnNZIXjRaBp_EhApsA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_J-8pPtsFHDEC-ZgKu9mTUA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_aLm9K6MhYMuRXGLOEbTbRA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_rdoT3r6U6UfBGsZA1CGX_w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_w9LgE-7BwAVoTxiyLL3dSQ: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_PoWz5p01xjQq4h-8oCQIUw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_uvYPrY1XpOlqHldasgdp-A: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_trlFon5N4xri_seIouSogA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_cz20avlQd4Pb_HuboLfChw: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_0KYaaBIaHcH_S5j2KMvOAg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_5B6HHZRdaWKww3Ayk3Z0og: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_KhmOQDy_9Cmwl7nkJgf_oA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_N3PSQrEWQrBx8eOEmEJR0w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_Rv5X9lKMzu1Fdclo0oFJCQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_7K55ikrpgdkntD-uS1elNQ: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_6XuwM02_HZ2aRQh4KZMiiw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_Pf-PUHPxTGsq4tUE_82aOw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_GQgPwWz-VRP345IUsvlz8A: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_hBWgPD4L-OhHH8Fpt5In-Q: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_ckWfWKvDzWYGc23ZgLev1Q: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_cIeqe7xsURI2Lniqy-IR4g: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_8qLEkoTDZ-I0BYcWJD190w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_R_t1yCy2y3yPU3kL68jUUA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_xDXzPfDrzspMm4vlC3XcMA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_zC0_d-7pYIsGQ0rIJWdC9g: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_4MzV_jyRAMHgqpsKm2CU6A: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_oD_1VjVQxTWylpHKjYfSLg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_wM8juKhX9qNfurIv7XN2tA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_aUc2ag1OA-6uyuerFqOSjw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_smsgtqXQIyG0X-wkl64ADA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_zPKDyuwnzmbTgvxtnLbBDQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_OSWVJTou5D1niwYtB7rBkA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_fCLzx87Bri-l_9yqyPTd9A: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_Qo7VuQNeL7BOU5oeVyzfjg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_UUklzypMq4JE9IW2zfJfDQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_oaE_eAGo6AWmcAdm9AwEjw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_lpS3z399pCtg_RaLK2sdSw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_D1X3quZCkw2VZ8dvmBPyhw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_-9bp5jPgLtqf68dnh7Hc9g: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_ujb-93Gfn1xmWwI76Q3P3g: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_MOwUUDINGmt3vzatQL7X4Q: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_3lQBhhLWYdm0nPqca2iPjQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_NRkL_K9CQUEE1SSscpccUw: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_Hdi3WiDT4UPGumDN1v7ZKw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_cEoRdrbXmLD6ovSJ5UuOQw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_LByGtF7YqzkEIVugLa0rzg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_w9VK70zBDL76l41DCf_B7g: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_A3w1Zd2oOQKr7tw4mKYMng: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_GR1hUFFPIbpMDLs4OJUjAg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_bGSVB9sG5mdfLeIr65ptMQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_RI6AzGsTnyFxeqwxbt3Aqg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_MVm7bTz0jAkCDRoimxqX4A: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_7Nj2tx1OgaOGslV9W395hA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_pYX06s8m-AmrKCeSFWBC9g: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_l55X2PnhwKSiuDSTJfKSIw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_Ltehvf4K6vZ6gQtjWtCnqw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_AkkvOCmTidyCFfUrK90Nhg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player__5dqO8ZH-C5nZlDTvDyHcQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_bHB54RswMIImIVhG-vUSkA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_lhLMhxQILLVhHsO81P9NbQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_LUcI4viQyK6oIjLv6qAReQ: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_oMYL-_RueC0u67fQppaUsQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_EVKplT_pqkHkjPd85r_GZw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_IgJJSxizhqKuouZ9X19_sA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_CXCMK9kauyF0NCg6--1H4A: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_vH1LfXB1pozrF50SoqDxIw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_pA-NtrOWyLYZL88td_NHJg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_HlD9MvhDfReqtWY1kQIc_g: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_6HM_9dyoFTnDrozsb1QRqg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_U7Rgy2L0iuMIp0KStq8k3A: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_7cX9vrcfTZ4YktOr5OI5gg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_AWlpMEaa3IMnjM8xOvoDJg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_Eu2UazYe1Sa5XAztzCb8ZA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_X2CKY7bPt4NkhT26Ntb73w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_8UEOFhbajF63YiGJfp_FGg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_7Q8P6XTRYhBKDjv2eFyvaQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_ObZB5GDlxoOf3sJH5M7d5w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_4V5j6x6FSLbUGAwZiu3nrQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_5r6MwXaIUvtDQH3i8fT5GA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_CNN7aFWffM9cpJppRmDJKw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_hvSWCxvY-HrzlWfxKAjW6w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_OG7XbhZLEEv2Lb2oqCh-wg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_QAYBuhNr5kmNDsW4MzX8rw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_UO-GwcDtB0LHOcXo0j93Pg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_16CQvVVE_0E60ugIXQImzQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_p3htGlNw9_Z86Rcx8Flfiw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_L6L9b51Q_ggNOcxD0kbHaQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_YPLFrZjW0fhTQtT92LhQSg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_d4va_DGDgb5tZd7nofBI_g: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_IwiEYyZjQ7Pb8Tvz889xmQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_gISQNrjuOUXw17wisCmz4Q: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_GyWsNdrI0WecbUfEl2_DyQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_-NIVyDdesRIYkeGV-TJnvw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_sYhTwamkYyge8HBTiXHFjA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_uhkj44VxtlesCFawrSxzJA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_xwGn6DTnsGg1tWaiLEvj9A: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_JytgKpF0s6o-uh0sipQ4mA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player__nxt7c0GqiNdPSh5RW87DA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_LLECAu6J3RpwgqKZoULd0A: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1921)
+[ActionCable] Broadcasting to player_CkEvFFcgn0fW7Xo_xlWfXg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_w2k7iNJnpK9KRCB0k5Vy3w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_3yWddX_vsr35KOUmPXTDrQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_d5EIrp6tr1nWcgxknQXVpg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_0yUhq4fZiyLp4_5VvtLJvg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_RlONYoHQFCFt6yeOqdpL0A: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_pTaViJv4bdpX29YiXNBlTA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_gx9hvNZkTVk480iTDy6P8w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_tsTPvh2vwcsSmcN5BxBW4w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_7pjHha-s9Ak3G6CP3DA2Ww: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_MXDJxekzQiWDHi5RurGBaQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_fH_yFGQwcNfU2yhu_sYTxQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_TA1Wu1wpA2cDK1BHHwY0tw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_qvwE4MkAnqj9WcVvuX1q7A: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_XWRgD9XcUwsa3Eu2WJ0C5g: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_3ybQVYls85mrHSwq294f7Q: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_wPlx-VoiDRmzJ2tMB0bT0Q: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_bZzxg4JYf9teusEzJw80vQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_EhzDmgi1Tg4nIQ4okiSDZw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_j8-zQkEMUPWr_9YcIYimYQ: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_nLzrUbqxfFuqeMtbRJf7AA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_StfG5fZsSy0ptYU46bq7_Q: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_iUVABnHXxlwziyzQ7An7oA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_N7ZMVv8pCjo5LNSPjAJuqQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_2MUaMukJeamd3Nom_Ci92Q: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_TCwLe3DuQNuhEKLjZsvZ5w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_Bo8c-XgL9pKQM1KylxsSDw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_by7JCV6s4KBIljC2UNzf5Q: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_sWx4fC2ScscX3FWJ7APmRg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_rahlm-kfHJwrxmYBeKGX0w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_wtx0-kbx_HSkkRwXWr0NMg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_BMj1DrKC3yJNP5ye1K4mpA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_hN1wGeyzgDF9CthfCE4yEw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_VxqTFgY37LSCcH1kHhmZTQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_-fSzFeFcfAaqsB1x3LOXCg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_y6pYTHOPFuZK44XWE81w6g: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_-kiFGjUcEY5b9-i8qVopnw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_gIqtsiIMyb9olLgvy_TJVg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_udQl4QQGvvDUXfJPttEOjw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_NlSwJNKOeQtQgQ4ugZjJvQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_wW8nUvMII9of8z9ubxCqDQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_nljz0GyaSqmfYq4lfHf7Fg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_FoJwtWEc2zJUttS_n9dImg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_9JH-VWlKdZOVU01ZHLZiig: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_mEwk0ix7IyCDoqKF9uzA2Q: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_iNTKwwJXnmdY4YkJbwkAXQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_b4JQ1E-JGMKkRnH8wkDJ5g: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_3KxJksV6jVyireilDhRamQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_MynC98LA5yMZLC1q9NqQhQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_ny8qO1clYqApie50lxwY8g: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_v8piWdCd7zP8rMdvEQc_IQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_0Vo7Gibipf4p-iwvdvtDsg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_0FIFdCE9sxWCfbslTC4GKg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_5f0WIxiX9RkqSGXepmhhug: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_y0wQpvwV2gXyRt3j-l2HdA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_GXX0Tx-M_gKhBPQyKPakKg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_l5o6l2ZxKP44RRdDmxZHnw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_CbKmpjFcI41fx-n_y9T-pw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_YQXLMIXNQ6OVvyGyBbVZCA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_xY8o4of4OdWL1C8Th2HYZg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_maCk3OBcZ6XxLZhWaM78wg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_QiYgKVjRaix25l-woD5aYA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_87FvInGrP6_mmrED_uE1Zw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_lRJTafVlhZ5lX0dpsB02JA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_TAN99dPCxEX_rIQSlBWT1w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_5cP0Y83VNImSqmn_ksuXuQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_C0FhPWz7z49v3R6GxPwrYg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_hDk1ufbJH_rHdoY4gZzm5w: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_IAIkjQGwRdn1_yOAPimAMQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_ji5X1PD_yVLVpQOnChzh_A: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_oJltM5dI7w3ga_5YaHn8HA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_lZ2wic6XOUtYelMd4HhVZg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_ZtepWs0SU_E-_T_jAjsA5g: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_-1UfpNiGC7pOcXYZls5dCw: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_3UE-K5_vYzhs9iqAZglTsg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_BxWta8oekynDg2Su1EMX3w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_UIJXCLDwCW5IYylBgQSV6w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_OCskUsHiZyjW1xlI0MrUVg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_dKJDCAgRvlhZOwxzXoEP2g: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_-aDHdPsldO3je2QyVWuGQA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_OkCJEV5_lxxhD7XYmu9vVQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_3vhyYf8zA_XlYfYfJ58t0A: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_vi_KnQ48vIZvz0m5DU-DZQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_7lz37UPt6dyvcQmUg146-w: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_J0swLLruRlNkmgdHi7dCvQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_yIeG1Pwl8H425_vQv0xdVg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_LSJzb8fNtY-Azc_fgwZeNQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_BgYPKh4mXskcUdVzoYIsIg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_KLa8rcQto1rZfGVcDIQSFw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_Id1YCXO90LXmy7kuPwl9EA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_pLv3cJXgM9-whMdlmptAGQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_uYjyUNQg7nZdxslmGy0CvA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_rmPOLStZkvDnYL9kftZJjw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_KX7hr_0w9VWnob-sIMbR_A: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_JL8vKWjyj-xqidx_173-6w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_by5iOmgRUKGibbwjc_HMsA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_k9CARLDZGgvUpKMUWVmYIQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_Pzg07Xud39A5fRhYkppaUQ: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_alBTcbj484_4JzcjQUw5HQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_bUYI4S15uwoygVUyv2BaDg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_inKV3WiK_PktJL-oeWryTQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_OOU82UeWIs86nRC1GjithQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_sv9Bc4wgCaN_2_rauoVIEA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_ona4Mn89gRN947aod26xHQ: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_VHkW18Ni2ondDG7N-LU-1Q: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_Y7PPfsesDl_lRHir6gFtiQ: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player__XlrXplS-3AzhydUGN3fag: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_-I-vYdd6RKokPxHXErrH5g: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_S_pze1-KvfjGOw0wtDQc3w: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_mnJ5zG-HPYt_hmQca8fOjA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_iAzAfpTHEviAp_QG81Oo2A: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player__-jfxQJtpNS1GqLmR--QQg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_OU_Q8EixIdk02PZTaoFHsg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_zuhQkZKhmHoyYtg8dNBEdA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_UVlULGcRIoyMBplg43AxnQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_rUdoeWSabUz5HbZ-Ei1bRg: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_TWkpznIfoXiECAp8iKlQMg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_BuTtprthflr5YKGmTTKeBw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_AqBuXCyL37TAHcnCT0ZguQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_9xHlEvb1ytb12Ufl4WQHJA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_7fXtplhzhVvKHIN-t3x0cw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_nOfhjyGTqY0SDB6oPS_8Pw: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_TKQMgWPuzL0JK3jM_P5ZRQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_MqwSVbJK_iL5U-zQN3wCRw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_HPGgVtWvsRxrAXB_1eczVw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player__ZdBo-TlF1c2JmNywUROGA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_MNT19-1If5ds7kY-3SDTYw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_a4JQzM_MQkO9a2RHsgsa6A: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_aH9lSzP8uYp1Wvi7LMbb3Q: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_ZNGcbef_7Rz22_jS5oDJyg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_uYZo2A9Wo3-pSBdgRVSIag: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_kzTn4yo22l8-yd_r-3M3-Q: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_CwsvSRz8xxCxZnHpa8Ofrg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_C1b97fOxJswlbzaq5lK9JA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_FZ7g2hf_sRyPHSLXEdYgWA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_1qKqVJvFlssyBobE6DbJkA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_wVddlmBr-dB2eqsUr6x1ZQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_t4UGWybl0i6lBM9mjCnFbw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_2jn8ugmbWXcku9qxGVMFJQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_5ZQnsixnJYkkiYCtugH4Nw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_zIPVn9Aq26aLF-RhhpneFw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_SW0QRTL1T7fbpmsO5ra6qA: {:action=>"game_start", :msg=>"nought"}
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 87)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 1920)
+[ActionCable] Broadcasting to player_IzDWsUfP60PWO0pj4xomgw: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_SenBTsVOCSkCEJasOZmykg: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_sIoua7T_dUV6hp8m1n_Dew: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_lufa4clMDt5iqUvlQePzYw: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_f2bWrcKCWh9_mj1V0XqPSA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_7WP4014km8urwzku41BQ1g: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_0wYltg9-08mxww_QDWhdQA: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_RkcDdhRT7Sm0uQ8VHRocrA: {:action=>"game_start", :msg=>"nought"}
+[ActionCable] Broadcasting to player_ytNbt5cBrP1bG1n6ZalvZg: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_PL2Kn5cVfHmY3ePSk7DunQ: {:action=>"game_start", :msg=>"nought"}
