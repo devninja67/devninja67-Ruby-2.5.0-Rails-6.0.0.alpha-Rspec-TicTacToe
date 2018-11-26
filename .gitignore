@@ -1,0 +1,9 @@
+# Ignore the default SQLite database.
+/db/*.sqlite3
+/db/*.sqlite3-journal
+
+# Ignore log directory
+/log
+
+# Ignore public/assets directory
+/public/assets

@@ -12205,3 +12205,63 @@ Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrad
 Registered connection (a81Mrccq94VhnUq-AEQH-A)
 GameChannel is transmitting the subscription confirmation
 GameChannel is streaming from player_a81Mrccq94VhnUq-AEQH-A
+Started GET "/cable" for 127.0.0.1 at 2018-11-25 03:10:43 +0800
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:10:44 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (IH2kCuliAfOZot9pOcKUDg)
+GameChannel is streaming from player_IH2kCuliAfOZot9pOcKUDg
+GameChannel is transmitting the subscription confirmation
+Started GET "/cable" for 127.0.0.1 at 2018-11-25 03:10:50 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:10:50 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (7ENQM2xLA6LSzfD93l0GPQ)
+GameChannel is streaming from player_7ENQM2xLA6LSzfD93l0GPQ
+[ActionCable] Broadcasting to player_7ENQM2xLA6LSzfD93l0GPQ: {:action=>"game_start", :msg=>"cross"}
+[ActionCable] Broadcasting to player_IH2kCuliAfOZot9pOcKUDg: {:action=>"game_start", :msg=>"nought"}
+GameChannel transmitting {"action"=>"game_start", "msg"=>"cross"} (via streamed from player_7ENQM2xLA6LSzfD93l0GPQ)
+GameChannel transmitting {"action"=>"game_start", "msg"=>"nought"} (via streamed from player_IH2kCuliAfOZot9pOcKUDg)
+GameChannel is transmitting the subscription confirmation
+Started GET "/cable" for 127.0.0.1 at 2018-11-25 03:10:55 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:10:55 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (EirTjwxQ48TtaVeenR_vag)
+GameChannel is streaming from player_EirTjwxQ48TtaVeenR_vag
+GameChannel is transmitting the subscription confirmation
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:11:29 +0800
+[ActionCable] Broadcasting to player_IH2kCuliAfOZot9pOcKUDg: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_7ENQM2xLA6LSzfD93l0GPQ
+GameChannel transmitting {"action"=>"opponent_withdraw"} (via streamed from player_IH2kCuliAfOZot9pOcKUDg)
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:11:31 +0800
+[ActionCable] Broadcasting to player_7ENQM2xLA6LSzfD93l0GPQ: {:action=>"opponent_withdraw"}
+GameChannel stopped streaming from player_IH2kCuliAfOZot9pOcKUDg
+Started GET "/" for 127.0.0.1 at 2018-11-25 03:18:12 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 380)
+Completed 200 OK in 372ms (Views: 366.8ms | ActiveRecord: 0.0ms | Allocations: 318449)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:18:12 +0800
+GameChannel stopped streaming from player_EirTjwxQ48TtaVeenR_vag
+Started GET "/cable" for 127.0.0.1 at 2018-11-25 03:18:12 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:18:12 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (ccCgnifUZ21x3M4g6I1YIA)
+GameChannel is streaming from player_ccCgnifUZ21x3M4g6I1YIA
+GameChannel is transmitting the subscription confirmation
+Started GET "/" for 127.0.0.1 at 2018-11-25 03:18:38 +0800
+Processing by GridController#index as HTML
+  Rendering grid/index.html.erb within layouts/application
+  Rendered grid/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 132)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 23537)
+
+
+Finished "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:18:38 +0800
+GameChannel stopped streaming from player_ccCgnifUZ21x3M4g6I1YIA
+Started GET "/cable" for 127.0.0.1 at 2018-11-25 03:18:38 +0800
+Started GET "/cable/" [WebSocket] for 127.0.0.1 at 2018-11-25 03:18:38 +0800
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Registered connection (FJAoymPDBMKh4cDcnytvhQ)
+GameChannel is transmitting the subscription confirmation
+GameChannel is streaming from player_FJAoymPDBMKh4cDcnytvhQ

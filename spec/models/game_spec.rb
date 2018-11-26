@@ -5,13 +5,25 @@ describe Game, :type => :model do
 
   describe "#start" do
 
-    before do
+    # before do
+    #   Game.start( player1, player2 )
+    # end
+
+    let! ( :param11 ) { "player_#{player1}" }
+    let! ( :param12 ) { "player_#{player2}" }
+    let! ( :param21 ) { { action: "game_start", msg: "cross" } }
+    let! ( :param22 ) { { action: "game_start", msg: "nought" } }
+
+    it "Broadcast for player with Cross( X ) be called after start" do
+      expect( ActionCable.server ).to receive( :broadcast ).at_least(:twice).with( ( eq(param11).or eq(param12) ), ( eq(param21).or eq(param22) ) )
       Game.start( player1, player2 )
     end
 
     it "Player1's opponent should be Player2 after method start" do
+      Game.start( player1, player2 )
       expect( Game.opponent_for( player1 ) ).to eq( player2 )
     end
+
   end
 
   describe "#withdraw" do
